@@ -1,0 +1,3 @@
+boot/shutdown,ksqldb_tocloud,ksqldb_tocloud,ksqldb_tocloud
+start/stop,ksqldb_tocloud,ksqldb_tocloud,ksqldb_tocloud_rest_ksql_server
+
