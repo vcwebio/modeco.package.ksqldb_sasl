@@ -1,6 +1,6 @@
 # `package.ksqldb_tocloud` - ModEco
 
-The ModEco ksqldb to cloud module package.  
+The ModEco Confluent ksqlDB package, with SASL authentication.
 See `conteco.docs.overview` for more information on the ModEco ecosystem.
 
 This package a KSQL server instance to be used with Kafka.  

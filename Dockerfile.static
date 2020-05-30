@@ -15,7 +15,7 @@ COPY ./ /conteco/repo/
 ENV CONTECO_REALM="vcwebio" \
     CONTECO_ECOSYSTEM="modeco" \
     CONTECO_TYPE="package" \
-    CONTECO_NAME="ksqldb_tocloud" \
+    CONTECO_NAME="ksqldb_sasl" \
     CONTECO_TAG="0.9.0" \
     CONTECO_BASE="image.wrapper" \
     CONTECO_BUILD="modeco"
@@ -23,11 +23,11 @@ LABEL io.vcweb.schema-version="1.0" \
       io.vcweb.realm="vcwebio" \
       io.vcweb.ecosystem="modeco" \
       io.vcweb.type="package" \
-      io.vcweb.name="ksqldb_tocloud" \
+      io.vcweb.name="ksqldb_sasl" \
       io.vcweb.tag="0.9.0" \
       io.vcweb.base="image.wrapper" \
       io.vcweb.build="modeco" \
-      io.vcweb.label="package.ksqldb_tocloud - ModEco" \
-      io.vcweb.description="The ModEco ksqldb to cloud module package." \
-      io.vcweb.docker.cmd.help="docker run vcwebio/modeco.package.ksqldb_tocloud --help"
+      io.vcweb.label="package.ksqldb_sasl - ModEco" \
+      io.vcweb.description="The ModEco Confluent ksqlDB package, with SASL authentication." \
+      io.vcweb.docker.cmd.help="docker run vcwebio/modeco.package.ksqldb_sasl --help"
 ##### END modeco/Dockerfile/env-labels-footer #####

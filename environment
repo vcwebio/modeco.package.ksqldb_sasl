@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-export CONTECO_LABEL="package.ksqldb_tocloud - ModEco"
-export CONTECO_DESCRIPTION="The ModEco ksqldb to cloud module package."
+export CONTECO_LABEL="package.ksqldb_sasl - ModEco"
+export CONTECO_DESCRIPTION="The ModEco Confluent ksqlDB package, with SASL authentication."
 
 export CONTECO_TYPE="package"
-export CONTECO_NAME="ksqldb_tocloud"
+export CONTECO_NAME="ksqldb_sasl"
 export CONTECO_TAG="0.9.0"
 export CONTECO_TAG_TYPE="incremental"
 
