@@ -12,7 +12,7 @@ services:
     networks: [modeco_overlay, package_overlay]
     deploy:
       mode: replicated
-      replicas: ${KSQLDB_SASL_REST_KSQL_SERVER_DEPLOY_REPLICAS}
+      ${KSQLDB_SASL_REST_KSQL_SERVER_DEPLOY_MODE_REPLICATED_REPLICAS}
       resources:
         limits:
           cpus: '${KSQLDB_SASL_REST_KSQL_SERVER_DEPLOY_RESOURCES_LIMITS_CPUS}'
