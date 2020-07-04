@@ -9,22 +9,17 @@ services:
     command: []
     volumes: []
     ports: [${KSQLDB_SASL_PORTS}]
-    networks: [package_overlay]
+    networks: [${CONTECO_NETWORKLOCAL}_overlay]
     deploy:
       mode: replicated
-      ${KSQLDB_SASL_DEPLOY_MODE_REPLICATED_REPLICAS}
       resources:
         limits:
-          cpus: '${KSQLDB_SASL_DEPLOY_RESOURCES_LIMITS_CPUS}'
           memory: '${KSQLDB_SASL_DEPLOY_RESOURCES_LIMITS_MEMORY}'
         reservations:
-          cpus: '${KSQLDB_SASL_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${KSQLDB_SASL_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-      placement:
-        constraints: [${KSQLDB_SASL_DEPLOY_PLACEMENT_CONSTRAINTS}]
-      labels: [${KSQLDB_SASL_DEPLOY_LABELS}]
-    labels: [${KSQLDB_SASL_LABELS}]
+${KSQLDB_SASL_COMPOSE_EXTENSIONS}
 # END SERVICE ksqldb_server.sasl
 
+networks: {${CONTECO_NETWORKLOCAL}_overlay: { external: true }}
 volumes: {}
-networks: {package_overlay: { external: true }}
+${CONTECO_DC_GLOBAL_COMPOSE_EXTENSIONS}
