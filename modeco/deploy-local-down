@@ -6,3 +6,17 @@ prefix="package_ksqldb_sasl_$2"
 
 executionplane --silent docker container prune --force
 
+if [[ "package_ksqldb_sasl_ksqldb_sasl_ksql_server_queries_volume" == "$prefix"* ]] ; then
+		continue="true"
+		while [[ "true" == "$continue" ]] ;
+		do
+			executionplane docker volume rm "package_ksqldb_sasl_ksqldb_sasl_ksql_server_queries_volume"
+			result=$(docker volume ls | grep "package_ksqldb_sasl_ksqldb_sasl_ksql_server_queries_volume")
+			if [[ "$result" == "" ]] ; then
+				continue="false"
+			else
+				sleep 3;
+			fi
+		done;
+	fi
+	
